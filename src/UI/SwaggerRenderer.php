@@ -13,7 +13,7 @@ class SwaggerRenderer
 {
     public const SwaggerUiScripts = [
         __DIR__ . "/templates/bundles/swagger-ui-bundle.js",
-        __DIR__ . "/templates/bundles/swagger-ui-standalone-project.js",
+        __DIR__ . "/templates/bundles/swagger-ui-standalone-preset.js",
     ];
 
     public const SwaggerUiStyles = [

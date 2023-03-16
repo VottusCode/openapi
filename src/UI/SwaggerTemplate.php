@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 namespace Liliana\OA\UI;
 
+use stdClass;
+
 /**
  * Helper data-class for the Swagger UI HTML template.
  */
 class SwaggerTemplate
 {
     public function __construct(
-        public readonly array $spec = [],
+        public readonly object $spec = new stdClass(),
         public readonly array $scripts = [],
         public readonly array $styles = [],
         public readonly string $mount = "#swagger-root",
