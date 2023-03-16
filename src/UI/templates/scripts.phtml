@@ -1,0 +1,31 @@
+<?php declare(strict_types=1);
+
+use Liliana\OA\UI\SwaggerTemplate;
+
+/** @var SwaggerTemplate $template */
+?>
+
+<?php foreach ($template->scripts as $script): ?>
+    <script>
+        <?= $template->readBundle($script) ?>
+    </script>
+<?php endforeach; ?>
+
+<script>
+    window.ui = SwaggerUIBundle({
+        dom_id: <?= $template->mount ?>,
+        deepLinking: true,
+        docExpansion: <?= json_encode($template->docExpansion) ?>,
+        filter: <?= json_encode($template->filter) ?>,
+        <?= !$template->url ? 'spec: ' . json_encode($template->spec) . ',' : '' ?>,
+        presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+        ],
+        plugins: [
+            SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout",
+        tryItOutEnabled: true
+    });
+</script>

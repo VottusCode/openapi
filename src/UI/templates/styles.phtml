@@ -1,0 +1,12 @@
+<?php declare(strict_types=1);
+
+use Liliana\OA\UI\SwaggerTemplate;
+
+/** @var SwaggerTemplate $template */
+?>
+
+<?php foreach ($template->styles as $style): ?>
+    <style>
+        <?= $template->readBundle($style) ?>
+    </style>
+<?php endforeach; ?>

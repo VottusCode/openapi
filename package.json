@@ -1,0 +1,9 @@
+{
+  "name": "@liliana/openapi",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Mia Lilian Morningstar <morningstar@procorp.cz>",
+  "dependencies": {
+    "swagger-ui-dist": "^4.18.1"
+  }
+}
