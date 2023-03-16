@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Liliana\OA\Spec;
 
-use JsonSerializable;
 use OpenApi\Generator;
 
 /**
@@ -24,7 +23,7 @@ class AnnotationSpecProvider implements SpecProviderInterface
     {
     }
 
-    public function provide(): JsonSerializable
+    public function provide(): object
     {
         $oa = Generator::scan($this->paths, $this->options);
         return $oa->jsonSerialize();
