@@ -13,6 +13,7 @@ use Liliana\OA\UI\SwaggerTemplate;
 
 <script>
     window.ui = SwaggerUIBundle({
+        url: <?= json_encode($template->url) ?>,
         dom_id: <?= json_encode($template->mount) ?>,
         deepLinking: true,
         docExpansion: <?= json_encode($template->docExpansion) ?>,
