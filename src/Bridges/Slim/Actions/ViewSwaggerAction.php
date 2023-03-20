@@ -18,7 +18,7 @@ class ViewSwaggerAction
     {
     }
 
-    public function __invoke(RequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
+    public function __invoke(RequestInterface $request, ResponseInterface $response): ResponseInterface
     {
         $response->getBody()->write($this->swaggerRenderer->renderFull());
 

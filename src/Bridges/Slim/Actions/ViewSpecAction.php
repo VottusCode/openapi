@@ -17,7 +17,7 @@ class ViewSpecAction
     {
     }
 
-    public function __invoke(RequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
+    public function __invoke(RequestInterface $request, ResponseInterface $response): ResponseInterface
     {
         $json = json_encode($this->specProvider->provide(), JSON_PRETTY_PRINT);
 
